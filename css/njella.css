@@ -1,0 +1,111 @@
+html{
+    background-color: lightsteelblue;
+}
+
+header{
+    height: 80px;
+    background-color: lightslategrey;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: black;
+    text-decoration: white;
+}
+
+h1 {
+    height: 80px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+h1.home{
+    text-align: center;
+}
+
+body{
+    height: 125vh;
+    font-family: 'Times New Roman', Times, serif;
+    background-size: cover;
+    background-color: lightsteelblue;
+    margin-top: 2rem;
+    padding: 30px;
+}
+
+body.home{
+    background-color: lightsteelblue;
+    align-content: center;
+}
+
+main{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    padding: 3rem;
+    background-color: whitesmoke;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    position: sticky;
+    width: 100%;
+}
+
+.row-centered{
+    text-align: center;
+}
+
+.col-centered{
+    align-content: center;
+    box-align: center;
+}
+
+h4{
+    text-decoration: underline;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+a.home:link, a.home:visited {
+    background-color: grey;
+    color: white;
+    padding: 3rem;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    border-radius: 2rem;
+    height: 15rem;
+    width: 15rem;
+  }
+  
+a.home:hover, a.home:active {
+    background-color: rgb(151, 149, 149);
+  }
+
+img{
+    border-radius: 40%;
+}
+
+img.logo{
+    height:40px;
+    width:40px;
+}
