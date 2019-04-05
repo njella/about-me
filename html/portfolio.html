@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="Naresh Jella">
+
+    <!-- Bootstrap required tags-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Link to CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--Icon Library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- JQuery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+    <!-- My stylesheet-->
+    <link rel="stylesheet" href="https://njella.github.io/about-me/css/njella.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link src="https://njella.github.io/about-me/css/njella.css">
+
+    <title>Portfolio</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            Naresh Jella
+        </h1>
+        <nav>
+            <ul>
+                <li><a class="active" href="https://njella.github.io/about-me/html/home.html"><i
+                            class="fa fa-fw fa-home" ; class="color: black"></i>Home</a></li>
+                <li><a href="https://njella.github.io/about-me/html/about.html"><i
+                            class="fa fa-fw fa-id-card"></i>About</a></li>
+                <li><a href="https://njella.github.io/about-me/html/portfolio.html"><i
+                            class="fa fa-fw fa-folder"></i>Portfolio</a></li>
+                <li><a href="https://njella.github.io/about-me/html/contact.html"><i
+                            class="fa fa-fw fa-user-circle"></i>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <article>
+            <section>
+                <h4>Links to Projects of Various Types:</h4>
+
+                <ul>
+                    <li>
+                        <a href="https://njella.github.io/about-me/">Files for this about-me page</a>
+                    </li>
+                    <li>
+                        <a href=" ">My Wedding Page</a> (<i>Currently
+                            Private</i>)
+                    </li>
+                </ul>
+
+            </section>
+        </article>
+
+        <br>
+        <br>
+
+        <article>
+            <h4>Here is a sample Javascript in HTML practice</h4>
+            <section>
+                Input a positive number and click calculate to see the square root of that number!
+                <br>
+                Input number here:
+                <input id="num" type="number" value="1">
+            </section>
+            <section>
+                <button id="button" class="btn btn-primary">Click here for Square Root!</button>
+            </section>
+            <section id="result"></section>
+            <section>
+                <button id="wipe" class="btn btn-primary">Click here to delete your storage of values!</button>
+            </section>
+        </article>
+
+    </main>
+
+    
+
+
+    <script>
+        console.log('SCRIPT START')
+        console.log('DECLARE TESTABLE FUNCTIONS......')
+        function sqroot(x) {
+            return Math.sqrt(x)
+        }
+        console.log('DECLARE EVENT LISTENERS.......')
+
+        window.addEventListener('load', (event) => {
+            console.log('    Starting initialization')
+            if (localStorage.getItem('num')) {
+                document.getElementById('num').value = localStorage.getItem('num')
+                console.log('   Stored num = ${localStorage.num}')
+            }
+        })
+
+        window.addEventListener('load', (event) => {
+            console.log('    Start initialization')
+            document.getElementById('num').value = localStorage.getItem('num')
+            console.log('   Stored num = ${localStorage.num}')
+        })
+
+        document.getElementById('button').addEventListener('click', function () {
+            const x = parseInt(document.getElementById('num').value)
+            console.log('num = ', x)
+            const answer = 'The square root of ' + x + ' is ' + Math.sqrt(x)
+            document.getElementById('result').innerHTML = answer
+            localStorage.setItem('num', x)
+        })
+
+        document.getElementById('wipe').addEventListener('click', () => {
+            console.log('   Starting wipe click handler')
+            localStorage.removeItem('num')
+            console.log(' Finished wipe click handler')
+        })
+
+        console.log('SCRIPT END')
+
+    </script>
+
+    <br>
+
+    <hr>
+
+    <footer>
+        &copy; 2019 njella
+    </footer>
+
+</body>
+
+</html>
